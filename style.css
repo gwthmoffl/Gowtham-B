@@ -1,1 +1,2258 @@
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{--bg:#07111d;--panel:#0c1928;--text:#edf4ff;--muted:#8291a8;--line:rgba(237,244,255,.12);--cyan:#62b6cb;--mint:#bee9e8;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}body.light{--bg:#f5f7f9;--panel:#fff;--text:#10223d;--muted:#66758b;--line:rgba(16,34,61,.13);--cyan:#16718c;--mint:#0d5a73}.grain{position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.cursor{position:fixed;width:18px;height:18px;border:1px solid var(--cyan);border-radius:50%;z-index:200;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s;background:rgba(98,182,203,.05)}.cursor span{display:block;width:3px;height:3px;background:var(--cyan);border-radius:50%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.loader{position:fixed;inset:0;background:var(--bg);z-index:300;display:flex;flex-direction:column;justify-content:center;padding:7vw;transition:transform 1s cubic-bezier(.8,0,.2,1)}.loader.hide{transform:translateY(-100%)}.loader-no{font:500 10px "DM Mono";color:var(--muted);letter-spacing:.15em}.loader-name{font-size:clamp(55px,12vw,180px);font-weight:800;letter-spacing:-.08em;margin-top:10px}.loader-name span{color:var(--cyan)}.loader-bar{height:1px;background:var(--line);max-width:500px;margin-top:25px}.loader-bar i{display:block;width:0;height:100%;background:var(--cyan);animation:load 1.8s ease forwards}@keyframes load{to{width:100%}}a{color:inherit;text-decoration:none}.nav{height:70px;position:fixed;z-index:150;top:20px;left:4vw;right:4vw;max-width:1320px;margin:auto;border:1px solid var(--line);background:rgba(7,17,29,.72);backdrop-filter:blur(20px);display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 10px;border-radius:16px}.light .nav{background:rgba(255,255,255,.75)}.logo{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.12em}.logo b{display:grid;place-items:center;width:43px;height:43px;border:1px solid var(--cyan);border-radius:10px;color:var(--cyan);font:500 11px "DM Mono"}.nav-center{display:flex;gap:28px;font:500 10px "DM Mono";text-transform:uppercase;color:var(--muted);letter-spacing:.1em}.nav-center a:hover{color:var(--text)}.nav-end{display:flex;align-items:center;gap:13px}.status{font:500 9px "DM Mono";color:var(--muted);text-transform:uppercase}.status i{display:inline-block;width:5px;height:5px;background:var(--cyan);border-radius:50%;box-shadow:0 0 12px var(--cyan);margin-right:6px}.nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}.hero{min-height:100vh;max-width:1440px;margin:auto;padding:180px 6vw 70px;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;position:relative}.hero-lines{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(to bottom,#000 0%,transparent 90%);opacity:.3}.hero-meta{position:absolute;top:130px;left:6vw;right:6vw;display:flex;justify-content:space-between;font:500 9px "DM Mono";letter-spacing:.14em;color:var(--muted)}.eyebrow,small{font:500 10px "DM Mono";letter-spacing:.14em;color:var(--muted)}.eyebrow{color:var(--cyan);margin-bottom:18px}.hero h1{font-size:clamp(55px,7.4vw,112px);line-height:.91;letter-spacing:-.07em;max-width:850px}.hero h1 em,.section h2 i{font-family:Georgia,serif;font-weight:400;color:var(--cyan)}.lead{max-width:570px;color:var(--muted);font-size:15px;line-height:1.85;margin-top:28px}.hero-cta{display:flex;align-items:center;gap:24px;margin-top:34px}.primary{background:var(--cyan);color:#07111d;padding:15px 18px;border-radius:8px;font-size:11px;font-weight:800;transition:.3s}.primary:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(98,182,203,.18)}.primary b{margin-left:20px}.text-link{font:500 10px "DM Mono";color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:6px}.hero-side{position:relative;min-height:580px;display:grid;place-items:center}.portrait-shell{width:min(365px,70vw);height:485px;border:1px solid var(--line);border-radius:20px;padding:12px;background:linear-gradient(145deg,rgba(98,182,203,.1),rgba(255,255,255,.01));position:relative;overflow:hidden;transform:rotate(2deg);transition:transform .2s ease;box-shadow:0 40px 100px rgba(0,0,0,.3)}.portrait-shell img{width:100%;height:100%;object-fit:cover;object-position:center 42%;border-radius:12px;filter:contrast(1.05)}.portrait-grid{position:absolute;inset:12px;z-index:2;border-radius:12px;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:35px 35px;mix-blend-mode:overlay;pointer-events:none}.scan{position:absolute;left:12px;right:12px;height:1px;top:20%;background:var(--cyan);box-shadow:0 0 18px var(--cyan);z-index:3;animation:scan 4s ease-in-out infinite}@keyframes scan{50%{top:82%}}.portrait-caption{position:absolute;z-index:4;left:25px;right:25px;bottom:24px;display:flex;justify-content:space-between;font:500 8px "DM Mono";letter-spacing:.12em;color:#fff}.orbit-text{position:absolute;bottom:35px;right:-40px;width:330px;white-space:nowrap;overflow:hidden;font:500 8px "DM Mono";letter-spacing:.16em;color:var(--cyan);transform:rotate(-90deg)}.hero-bottom{position:absolute;bottom:30px;left:6vw;display:flex;gap:12px;align-items:center;font:500 8px "DM Mono";color:var(--muted);letter-spacing:.12em}.line{width:80px;height:1px;background:var(--line)}.line i{display:block;width:35%;height:100%;background:var(--cyan);animation:line 2s infinite}@keyframes line{50%{width:100%}100%{width:35%}}.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:15px 0;white-space:nowrap}.ticker div{display:inline-block;min-width:max-content;font-size:11px;letter-spacing:.13em;font-weight:700;animation:tick 28s linear infinite}.ticker b{color:var(--cyan);padding:0 28px}@keyframes tick{to{transform:translateX(-50%)}}.section{max-width:1320px;margin:auto;padding:150px 6vw}.section-top{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:65px}.section-top h2{font-size:clamp(48px,6vw,84px);line-height:.92;letter-spacing:-.06em;margin-top:13px}.section-top>p{max-width:360px;color:var(--muted);font-size:13px;line-height:1.8}.project-feature{display:grid;grid-template-columns:1.55fr .7fr;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--panel);margin-bottom:20px;transition:border-color .4s}.project-feature:hover{border-color:rgba(98,182,203,.45)}.project-feature.reverse{grid-template-columns:.7fr 1.55fr}.project-feature.reverse .project-visual{order:2}.project-feature.reverse .project-details{order:1}.project-visual{height:520px;position:relative;overflow:hidden}.project-number{position:absolute;top:18px;right:20px;font:500 9px "DM Mono";color:rgba(255,255,255,.45)}.browser{position:absolute;inset:50px 45px 0;border-radius:13px 13px 0 0;overflow:hidden;box-shadow:0 35px 70px rgba(0,0,0,.2)}.browser-top{height:29px;background:#ddd8cf;display:flex;gap:5px;align-items:center;padding:0 9px}.browser-top span{width:5px;height:5px;background:#858782;border-radius:50%}.browser-top label{margin-left:auto;font:500 7px "DM Mono";color:#636662}.elvora{background:linear-gradient(135deg,#dbe6e5,#9ca8a4)}.elvora-screen{height:calc(100% - 29px);position:relative;background:radial-gradient(circle at 72% 44%,#f4dfbe,#f3eee6 45%,#d6d4cb)}.ev-copy{position:absolute;z-index:2;left:34px;top:45px;color:#28312e}.ev-copy small{color:#5f6965;font-size:7px}.ev-copy h3{font-size:31px;line-height:1.02;margin:10px 0 18px;letter-spacing:-.05em}.ev-copy span{font:700 7px "DM Mono";background:#26322f;color:white;padding:9px}.ev-chair{position:absolute;right:70px;bottom:42px;width:175px;height:135px;background:#53615b;border-radius:90px 90px 13px 13px;transform:rotate(-3deg);box-shadow:30px 24px 0 -15px #3f4945}.ev-shadow{position:absolute;right:25px;top:40px;width:80px;height:115px;background:#c2a274;border-radius:60px 60px 7px 7px;opacity:.65}.travelo{background:linear-gradient(135deg,#0e2d43,#79aeb7);padding:45px}.travel-layout{height:100%;border:1px solid rgba(255,255,255,.3);border-radius:14px;padding:27px;background:rgba(255,255,255,.07);position:relative}.travel-layout>small{color:#e4f4f5}.travel-layout h3{font-size:34px;line-height:1;letter-spacing:-.05em;margin-top:75px}.travel-layout h3 i{font-family:Georgia,serif;font-weight:400}.travel-card{position:absolute;left:24px;right:24px;bottom:23px;background:rgba(3,18,28,.55);border:1px solid rgba(255,255,255,.2);padding:14px;display:grid;grid-template-columns:25px 1fr}.travel-card b{font:500 8px "DM Mono"}.travel-card strong{font-size:10px}.travel-card span{grid-column:2;font-size:8px;color:#b7ced3;margin-top:4px}.project-details{padding:34px 28px;display:flex;flex-direction:column;justify-content:space-between}.project-details h3{font-size:25px;margin-top:8px;letter-spacing:-.04em}.project-details>p{font-size:12px;color:var(--muted);line-height:1.8;margin:28px 0}.project-tags{display:flex;flex-wrap:wrap;gap:6px}.project-tags span{border:1px solid var(--line);border-radius:100px;padding:8px 9px;font:500 7px "DM Mono";color:var(--muted)}.project-details>a{margin-top:28px;color:var(--cyan);font:500 9px "DM Mono";letter-spacing:.1em}.project-details>a b{float:right}.about{display:grid;grid-template-columns:.3fr 1fr;gap:70px;border-top:1px solid var(--line)}.side-label{font:500 9px "DM Mono";letter-spacing:.13em;color:var(--muted);line-height:1.7}.about-main h2{font-size:clamp(43px,5.7vw,78px);line-height:.98;letter-spacing:-.06em;max-width:920px;margin:14px 0 45px}.about-main h2 span{color:var(--cyan)}.about-text{display:grid;grid-template-columns:1fr 1fr;gap:45px;max-width:880px}.about-text p{font-size:14px;line-height:1.9;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:55px}.stats div{padding:24px 18px 10px;border-right:1px solid var(--line)}.stats div:last-child{border:0}.stats b{display:block;font-size:28px;letter-spacing:-.05em}.stats span{display:block;font:500 9px "DM Mono";color:var(--cyan);margin:8px 0}.stats small{font-size:8px}.capabilities{border-top:1px solid var(--line)}.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}.cap{padding:30px 25px;border-right:1px solid var(--line);min-height:370px;display:flex;flex-direction:column}.cap:last-child{border:0}.cap>b{font:500 9px "DM Mono";color:var(--cyan)}.cap h3{font-size:23px;margin:48px 0 20px}.cap p{font-size:12px;line-height:1.85;color:var(--muted)}.cap-foot{margin-top:auto;border-top:1px solid var(--line);padding-top:14px;font:500 8px "DM Mono";color:var(--muted)}.tool-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}.tool-row span{border:1px solid var(--line);border-radius:100px;padding:10px 13px;font:500 8px "DM Mono";color:var(--muted)}.timeline{display:grid;grid-template-columns:.3fr 1fr;gap:70px;border-top:1px solid var(--line)}.timeline-main{border-top:1px solid var(--line)}.time-item{display:grid;grid-template-columns:120px 1fr 30px;gap:25px;padding:27px 0;border-bottom:1px solid var(--line);align-items:start}.time-item>span,.time-item>b{font:500 9px "DM Mono";color:var(--muted)}.time-item h3{font-size:20px;margin:7px 0}.time-item p{font-size:11px;color:var(--muted)}.time-item>b{text-align:right;color:var(--cyan)}.contact{position:relative;min-height:720px;display:grid;place-items:center;overflow:hidden}.contact-bg{position:absolute;font-size:clamp(100px,20vw,280px);font-weight:800;line-height:.7;letter-spacing:-.1em;color:rgba(98,182,203,.045);left:5%;top:30%;pointer-events:none}.contact-bg i{font-family:Georgia,serif;font-weight:400}.contact-content{position:relative;z-index:2;width:min(850px,100%);text-align:center}.contact-content h2{font-size:clamp(60px,9vw,120px);line-height:.85;letter-spacing:-.07em;margin:17px 0 25px}.contact-content>p{color:var(--muted);font-size:14px}.mail{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:25px 0;margin:45px auto 0;max-width:700px;font-size:clamp(18px,3vw,28px);letter-spacing:-.03em}.mail b{color:var(--cyan)}.links{display:flex;justify-content:center;gap:25px;margin-top:25px}.links a{font:500 9px "DM Mono";color:var(--muted)}.links a:hover{color:var(--cyan)}footer{max-width:1320px;margin:auto;border-top:1px solid var(--line);padding:25px 6vw 35px;display:flex;justify-content:space-between;font:500 8px "DM Mono";letter-spacing:.12em;color:var(--muted)}.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}@media(max-width:900px){.nav-center{display:none}.hero{grid-template-columns:1fr;padding-top:150px}.hero-side{margin-top:50px;min-height:500px}.section-top{align-items:start;flex-direction:column}.project-feature,.project-feature.reverse{grid-template-columns:1fr}.project-feature.reverse .project-visual,.project-feature.reverse .project-details{order:initial}.about,.timeline{grid-template-columns:1fr}.cap-grid{grid-template-columns:1fr}.cap{border-right:0;border-bottom:1px solid var(--line)}.about-text{grid-template-columns:1fr}.stats{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line)}.time-item{grid-template-columns:90px 1fr 20px}}@media(max-width:600px){.nav{left:3vw;right:3vw}.status{display:none}.hero{padding-left:5vw;padding-right:5vw}.hero h1{font-size:58px}.hero-side{min-height:430px}.portrait-shell{height:390px;width:270px}.section{padding:100px 5vw}.project-visual{height:390px}.browser{inset:28px 18px 0}.travelo{padding:25px}.travel-layout h3{margin-top:50px;font-size:27px}.project-details{padding:25px}.contact{min-height:600px}.mail{font-size:17px}.links{gap:14px}footer{flex-direction:column;gap:10px;padding-left:5vw;padding-right:5vw}}
+/* =========================================================
+   01.  GOWTHAM B — PORTFOLIO
+   
+   MAIN STYLESHEET
+   ========================================================= */
+
+
+/* =========================================================
+   02. RESET
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Prevent fixed navigation from covering anchored sections */
+section[id] {
+    scroll-margin-top: 110px;
+}
+
+
+body {
+    overflow-x: hidden;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: "Manrope", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   03. DESIGN VARIABLES
+   ========================================================= */
+
+body {
+
+    --bg: #07111d;
+
+    --panel: #0c1928;
+
+    --text: #edf4ff;
+
+    --muted: #8291a8;
+
+    --line: rgba(237, 244, 255, 0.12);
+
+    --cyan: #62b6cb;
+
+    --mint: #bee9e8;
+}
+
+
+body.light {
+
+    --bg: #f5f7f9;
+
+    --panel: #ffffff;
+
+    --text: #10223d;
+
+    --muted: #66758b;
+
+    --line: rgba(16, 34, 61, 0.13);
+
+    --cyan: #16718c;
+
+    --mint: #0d5a73;
+}
+
+
+/* =========================================================
+   04. GLOBAL ELEMENTS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   05. GRAIN EFFECT
+   ========================================================= */
+
+.grain {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 100;
+
+    pointer-events: none;
+
+    opacity: 0.035;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+
+
+
+
+/* =========================================================
+   06. LOADING SCREEN
+   ========================================================= */
+
+.loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 300;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 7vw;
+
+    background: var(--bg);
+
+    transition:
+        transform 1s cubic-bezier(0.8, 0, 0.2, 1);
+}
+
+
+.loader.hide {
+    transform: translateY(-100%);
+}
+
+
+.loader-no {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.15em;
+}
+
+
+.loader-name {
+
+    margin-top: 10px;
+
+    font-size: clamp(55px, 12vw, 180px);
+
+    font-weight: 800;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.08em;
+}
+
+
+.loader-name span {
+    color: var(--cyan);
+}
+
+
+.loader-bar {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 1px;
+
+    margin-top: 25px;
+
+    background: var(--line);
+}
+
+
+.loader-bar i {
+
+    display: block;
+
+    width: 0;
+
+    height: 100%;
+
+    background: var(--cyan);
+
+    animation: loaderProgress 1.8s ease forwards;
+}
+
+
+@keyframes loaderProgress {
+
+    to {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   07. NAVIGATION
+   ========================================================= */
+
+.nav {
+
+    position: fixed;
+
+    top: 20px;
+
+    left: 4vw;
+    right: 4vw;
+
+    z-index: 150;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: auto;
+
+    max-width: 1320px;
+
+    height: 70px;
+
+    margin: auto;
+
+    padding: 0 14px 0 10px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 16px;
+
+    background: rgba(7, 17, 29, 0.82);
+
+    /*
+       Browser compatibility
+    */
+
+    -webkit-backdrop-filter: blur(20px);
+
+    backdrop-filter: blur(20px);
+}
+
+
+body.light .nav {
+
+    background: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   08. LOGO
+   ========================================================= */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.logo b {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 43px;
+    height: 43px;
+
+    border: 1px solid var(--cyan);
+
+    border-radius: 10px;
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   09. NAVIGATION LINKS
+   ========================================================= */
+
+.nav-center {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+.nav-center a {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-center a:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   10. NAVIGATION RIGHT
+   ========================================================= */
+
+.nav-end {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.status {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+}
+
+
+.status i {
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 6px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    box-shadow: 0 0 12px var(--cyan);
+}
+
+
+.nav button {
+
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 50%;
+
+    color: var(--text);
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   11. HERO SECTION
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 1.08fr 0.92fr;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    max-width: 1440px;
+
+    margin: auto;
+
+    padding: 180px 6vw 70px;
+}
+
+
+.hero-lines {
+
+    position: absolute;
+
+    /* Keep the decorative grid from blocking buttons/links */
+    pointer-events: none;
+
+    inset: 0;
+
+    opacity: 0.3;
+
+    background-image:
+        linear-gradient(
+            var(--line) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            var(--line) 1px,
+            transparent 1px
+        );
+
+    background-size: 90px 90px;
+
+    /*
+       Compatibility version
+    */
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            #000 0%,
+            transparent 90%
+        );
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000 0%,
+            transparent 90%
+        );
+}
+
+
+/* =========================================================
+   12. HERO META
+   ========================================================= */
+
+.hero-meta {
+
+    position: absolute;
+
+    top: 130px;
+
+    left: 6vw;
+    right: 6vw;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.hero-meta span {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   13. SMALL TEXT
+   ========================================================= */
+
+small {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+
+/* =========================================================
+   14. HERO CONTENT
+   ========================================================= */
+
+.eyebrow {
+
+    margin-bottom: 18px;
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.14em;
+}
+
+
+.hero h1 {
+
+    max-width: 850px;
+
+    font-size: clamp(55px, 7.4vw, 112px);
+
+    font-weight: 800;
+
+    line-height: 0.91;
+
+    letter-spacing: -0.07em;
+}
+
+
+.hero h1 em {
+
+    color: var(--cyan);
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+}
+
+
+.lead {
+
+    max-width: 570px;
+
+    margin-top: 28px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   15. HERO BUTTONS
+   ========================================================= */
+
+.hero-cta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    margin-top: 34px;
+}
+
+
+.primary {
+
+    padding: 15px 18px;
+
+    border-radius: 8px;
+
+    color: #07111d;
+
+    background: var(--cyan);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.primary:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 16px 40px
+        rgba(98, 182, 203, 0.18);
+}
+
+
+.primary b {
+
+    margin-left: 20px;
+}
+
+
+.text-link {
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   16. HERO PROFILE
+   ========================================================= */
+
+.hero-side {
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    min-height: 580px;
+}
+
+
+.portrait-shell {
+
+    position: relative;
+
+    width: min(365px, 70vw);
+
+    height: 485px;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(98, 182, 203, 0.1),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.3);
+
+    transform: rotate(2deg);
+
+    transition: transform 0.2s ease;
+}
+
+
+.portrait-shell img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center 42%;
+
+    border-radius: 12px;
+
+    filter: contrast(1.05);
+}
+
+
+/* =========================================================
+   17. PROFILE GRID
+   ========================================================= */
+
+.portrait-grid {
+
+    position: absolute;
+
+    inset: 12px;
+
+    z-index: 2;
+
+    border-radius: 12px;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 35px 35px;
+
+    mix-blend-mode: overlay;
+}
+
+
+/* =========================================================
+   18. PROFILE SCAN
+   ========================================================= */
+
+.scan {
+
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+
+    top: 20%;
+
+    z-index: 3;
+
+    height: 1px;
+
+    background: var(--cyan);
+
+    box-shadow: 0 0 18px var(--cyan);
+
+    animation: profileScan 4s ease-in-out infinite;
+}
+
+
+@keyframes profileScan {
+
+    50% {
+        top: 82%;
+    }
+}
+
+
+/* =========================================================
+   19. PROFILE CAPTION
+   ========================================================= */
+
+.portrait-caption {
+
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    bottom: 24px;
+
+    z-index: 4;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #ffffff;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+}
+
+
+.orbit-text {
+
+    position: absolute;
+
+    right: -40px;
+    bottom: 35px;
+
+    width: 330px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.16em;
+
+    transform: rotate(-90deg);
+}
+
+
+/* =========================================================
+   20. HERO BOTTOM
+   ========================================================= */
+
+.hero-bottom {
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 6vw;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+}
+
+
+.line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: var(--line);
+}
+
+
+.line i {
+
+    display: block;
+
+    width: 35%;
+
+    height: 100%;
+
+    background: var(--cyan);
+
+    animation: lineMove 2s infinite;
+}
+
+
+@keyframes lineMove {
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 35%;
+    }
+}
+
+
+/* =========================================================
+   21. TICKER
+   ========================================================= */
+
+.ticker {
+
+    overflow: hidden;
+
+    padding: 15px 0;
+
+    border-top: 1px solid var(--line);
+
+    border-bottom: 1px solid var(--line);
+
+    white-space: nowrap;
+}
+
+
+.ticker div {
+
+    display: inline-block;
+
+    min-width: max-content;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    animation: tickerMove 28s linear infinite;
+}
+
+
+.ticker b {
+
+    padding: 0 28px;
+
+    color: var(--cyan);
+}
+
+
+@keyframes tickerMove {
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   22. GENERAL SECTION
+   ========================================================= */
+
+.section {
+
+    max-width: 1320px;
+
+    margin: auto;
+
+    padding: 150px 6vw;
+}
+
+
+/* =========================================================
+   23. SECTION HEADER
+   ========================================================= */
+
+.section-top {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    margin-bottom: 65px;
+}
+
+
+.section-top h2 {
+
+    margin-top: 13px;
+
+    font-size: clamp(48px, 6vw, 84px);
+
+    font-weight: 800;
+
+    line-height: 0.92;
+
+    letter-spacing: -0.06em;
+}
+
+
+.section-top h2 i {
+
+    color: var(--cyan);
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+}
+
+
+.section-top > p {
+
+    max-width: 360px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   24. PROJECT CARD
+   ========================================================= */
+
+.project-feature {
+
+    display: grid;
+
+    grid-template-columns: 1.55fr 0.7fr;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 22px;
+
+    background: var(--panel);
+
+    transition: border-color 0.4s ease;
+}
+
+
+.project-feature:hover {
+
+    border-color:
+        rgba(98, 182, 203, 0.45);
+}
+
+
+/* =========================================================
+   25. REVERSE PROJECT
+   ========================================================= */
+
+.project-feature.reverse {
+
+    grid-template-columns: 0.7fr 1.55fr;
+}
+
+
+.project-feature.reverse
+.project-visual {
+
+    order: 2;
+}
+
+
+.project-feature.reverse
+.project-details {
+
+    order: 1;
+}
+
+
+/* =========================================================
+   26. PROJECT VISUAL
+   ========================================================= */
+
+.project-visual {
+
+    position: relative;
+
+    height: 520px;
+
+    overflow: hidden;
+}
+
+
+.project-number {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   27. ELVORA VISUAL
+   ========================================================= */
+
+.elvora {
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbe6e5,
+            #9ca8a4
+        );
+}
+
+
+.browser {
+
+    position: absolute;
+
+    top: 50px;
+    right: 45px;
+    bottom: 0;
+    left: 45px;
+
+    overflow: hidden;
+
+    border-radius: 13px 13px 0 0;
+
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, 0.2);
+}
+
+
+.browser-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    height: 29px;
+
+    padding: 0 9px;
+
+    background: #ddd8cf;
+}
+
+
+.browser-top span {
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #858782;
+}
+
+
+.browser-top label {
+
+    margin-left: auto;
+
+    color: #636662;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   28. ELVORA SCREEN
+   ========================================================= */
+
+.elvora-screen {
+
+    position: relative;
+
+    height: calc(100% - 29px);
+
+    background:
+        radial-gradient(
+            circle at 72% 44%,
+            #f4dfbe,
+            #f3eee6 45%,
+            #d6d4cb
+        );
+}
+
+
+.ev-copy {
+
+    position: absolute;
+
+    top: 45px;
+    left: 34px;
+
+    z-index: 2;
+
+    color: #28312e;
+}
+
+
+.ev-copy small {
+
+    color: #5f6965;
+
+    font-size: 7px;
+}
+
+
+.ev-copy h3 {
+
+    margin: 10px 0 18px;
+
+    font-size: 31px;
+
+    line-height: 1.02;
+
+    letter-spacing: -0.05em;
+}
+
+
+.ev-copy span {
+
+    padding: 9px;
+
+    color: #ffffff;
+
+    background: #26322f;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    font-weight: 700;
+}
+
+
+.ev-chair {
+
+    position: absolute;
+
+    right: 70px;
+    bottom: 42px;
+
+    width: 175px;
+    height: 135px;
+
+    border-radius: 90px 90px 13px 13px;
+
+    background: #53615b;
+
+    transform: rotate(-3deg);
+
+    box-shadow:
+        30px 24px 0 -15px #3f4945;
+}
+
+
+.ev-shadow {
+
+    position: absolute;
+
+    top: 40px;
+    right: 25px;
+
+    width: 80px;
+    height: 115px;
+
+    border-radius: 60px 60px 7px 7px;
+
+    opacity: 0.65;
+
+    background: #c2a274;
+}
+
+
+/* =========================================================
+   29. TRAVELO VISUAL
+   ========================================================= */
+
+.travelo {
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0e2d43,
+            #79aeb7
+        );
+}
+
+
+.travel-layout {
+
+    position: relative;
+
+    height: 100%;
+
+    padding: 27px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.3);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.travel-layout > small {
+
+    color: #e4f4f5;
+}
+
+
+.travel-layout h3 {
+
+    margin-top: 75px;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+
+.travel-layout h3 i {
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   30. TRAVELO CARD
+   ========================================================= */
+
+.travel-card {
+
+    position: absolute;
+
+    right: 24px;
+    bottom: 23px;
+    left: 24px;
+
+    display: grid;
+
+    grid-template-columns: 25px 1fr;
+
+    padding: 14px;
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.2);
+
+    background:
+        rgba(3, 18, 28, 0.55);
+}
+
+
+.travel-card b {
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+}
+
+
+.travel-card strong {
+
+    font-size: 10px;
+}
+
+
+.travel-card span {
+
+    grid-column: 2;
+
+    margin-top: 4px;
+
+    color: #b7ced3;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   31. PROJECT DETAILS
+   ========================================================= */
+
+.project-details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 34px 28px;
+}
+
+
+.project-details h3 {
+
+    margin-top: 8px;
+
+    font-size: 25px;
+
+    letter-spacing: -0.04em;
+}
+
+
+.project-details > p {
+
+    margin: 28px 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   32. PROJECT TAGS
+   ========================================================= */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.project-tags span {
+
+    padding: 8px 9px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 100px;
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    font-weight: 500;
+}
+
+
+.project-details > a {
+
+    margin-top: 28px;
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+}
+
+
+.project-details > a b {
+
+    float: right;
+}
+
+
+/* =========================================================
+   33. ABOUT
+   ========================================================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 0.3fr 1fr;
+
+    gap: 70px;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.side-label {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.13em;
+}
+
+
+.about-main h2 {
+
+    max-width: 920px;
+
+    margin: 14px 0 45px;
+
+    font-size: clamp(43px, 5.7vw, 78px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.06em;
+}
+
+
+.about-main h2 span {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   34. ABOUT TEXT
+   ========================================================= */
+
+.about-text {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    max-width: 880px;
+}
+
+
+.about-text p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   35. STATS
+   ========================================================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 55px;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.stats div {
+
+    padding: 24px 18px 10px;
+
+    border-right: 1px solid var(--line);
+}
+
+
+.stats div:last-child {
+    border-right: 0;
+}
+
+
+.stats b {
+
+    display: block;
+
+    font-size: 28px;
+
+    letter-spacing: -0.05em;
+}
+
+
+.stats span {
+
+    display: block;
+
+    margin: 8px 0;
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.stats small {
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   36. CAPABILITIES
+   ========================================================= */
+
+.capabilities {
+
+    border-top: 1px solid var(--line);
+}
+
+
+.cap-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+
+.cap {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 370px;
+
+    padding: 30px 25px;
+
+    border-right: 1px solid var(--line);
+}
+
+
+.cap:last-child {
+    border-right: 0;
+}
+
+
+.cap > b {
+
+    color: var(--cyan);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.cap h3 {
+
+    margin: 48px 0 20px;
+
+    font-size: 23px;
+}
+
+
+.cap p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.85;
+}
+
+
+.cap-foot {
+
+    margin-top: auto;
+
+    padding-top: 14px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   37. TOOLS
+   ========================================================= */
+
+.tool-row {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+
+.tool-row span {
+
+    padding: 10px 13px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 100px;
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   38. TIMELINE
+   ========================================================= */
+
+.timeline {
+
+    display: grid;
+
+    grid-template-columns: 0.3fr 1fr;
+
+    gap: 70px;
+
+    border-top: 1px solid var(--line);
+}
+
+
+.timeline-main {
+
+    border-top: 1px solid var(--line);
+}
+
+
+.time-item {
+
+    display: grid;
+
+    grid-template-columns: 120px 1fr 30px;
+
+    align-items: start;
+
+    gap: 25px;
+
+    padding: 27px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.time-item > span {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.time-item h3 {
+
+    margin: 7px 0;
+
+    font-size: 20px;
+}
+
+
+.time-item p {
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+.time-item > b {
+
+    color: var(--cyan);
+
+    text-align: right;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   39. CONTACT
+   ========================================================= */
+
+.contact {
+
+    position: relative;
+
+    display: grid;
+
+    place-items: center;
+
+    min-height: 720px;
+
+    overflow: hidden;
+}
+
+
+.contact-bg {
+
+    position: absolute;
+
+    top: 30%;
+    left: 5%;
+
+    color:
+        rgba(98, 182, 203, 0.045);
+
+    font-size:
+        clamp(100px, 20vw, 280px);
+
+    font-weight: 800;
+
+    line-height: 0.7;
+
+    letter-spacing: -0.1em;
+
+    pointer-events: none;
+}
+
+
+.contact-bg i {
+
+    font-family: Georgia, serif;
+
+    font-weight: 400;
+}
+
+
+.contact-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(850px, 100%);
+
+    text-align: center;
+}
+
+
+.contact-content h2 {
+
+    margin: 17px 0 25px;
+
+    font-size:
+        clamp(60px, 9vw, 120px);
+
+    line-height: 0.85;
+
+    letter-spacing: -0.07em;
+}
+
+
+.contact-content > p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   40. EMAIL
+   ========================================================= */
+
+.mail {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    max-width: 700px;
+
+    margin: 45px auto 0;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--line);
+
+    font-size:
+        clamp(18px, 3vw, 28px);
+
+    letter-spacing: -0.03em;
+}
+
+
+.mail b {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   41. SOCIAL LINKS
+   ========================================================= */
+
+.links {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+
+.links a {
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+
+.links a:hover {
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   42. FOOTER
+   ========================================================= */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    max-width: 1320px;
+
+    margin: auto;
+
+    padding: 25px 6vw 35px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--muted);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   43. SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.reveal.show {
+
+    opacity: 1;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   44. TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-center {
+        display: none;
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 150px;
+    }
+
+
+    .hero-side {
+
+        min-height: 500px;
+
+        margin-top: 50px;
+    }
+
+
+    .section-top {
+
+        align-items: start;
+
+        flex-direction: column;
+    }
+
+
+    .project-feature,
+    .project-feature.reverse {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-feature.reverse
+    .project-visual,
+    .project-feature.reverse
+    .project-details {
+
+        order: initial;
+    }
+
+
+    .about,
+    .timeline {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .cap-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .cap {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .about-text {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stats div {
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+
+    .time-item {
+
+        grid-template-columns:
+            90px 1fr 20px;
+    }
+
+}
+
+
+/* =========================================================
+   45. MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+
+        left: 3vw;
+        right: 3vw;
+    }
+
+
+    .status {
+        display: none;
+    }
+
+
+    .hero {
+
+        padding-right: 5vw;
+
+        padding-left: 5vw;
+    }
+
+
+    .hero h1 {
+
+        font-size: 58px;
+    }
+
+
+    .hero-side {
+
+        min-height: 430px;
+    }
+
+
+    .portrait-shell {
+
+        width: 270px;
+
+        height: 390px;
+    }
+
+
+    .section {
+
+        padding: 100px 5vw;
+    }
+
+
+    .project-visual {
+
+        height: 390px;
+    }
+
+
+    .browser {
+
+        top: 28px;
+
+        right: 18px;
+
+        left: 18px;
+    }
+
+
+    .travelo {
+
+        padding: 25px;
+    }
+
+
+    .travel-layout h3 {
+
+        margin-top: 50px;
+
+        font-size: 27px;
+    }
+
+
+    .project-details {
+
+        padding: 25px;
+    }
+
+
+    .contact {
+
+        min-height: 600px;
+    }
+
+
+    .mail {
+
+        font-size: 17px;
+    }
+
+
+    .links {
+
+        gap: 14px;
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding-right: 5vw;
+
+        padding-left: 5vw;
+    }
+
+}
